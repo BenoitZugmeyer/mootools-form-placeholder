@@ -120,4 +120,22 @@ this.Form.Placeholder = new Class({
 
 });
 
+
+this.Element.Properties.placeholder = {
+
+	set: function(value){
+		this.placeholder = value;
+		new Form.Placeholder(this);
+	},
+
+	get: function(){
+		return this.placeholder;
+	},
+
+	erase: function(){
+		this.placeholder = '';
+	}
+
+};
+
 })();
